@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
+$text-icons: #fff;
+$primary-text: #212121;
+$secondary-text: #727272;
+$accent-text: #cddc39;
+
+* {
+  font-family: 'PT Sans', sans-serif; 
+}
+
+
+header {
+  .site-title {
+    margin: 0;
+  }  
+  nav li a {
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1.2em;
+    color: $text-icons;
+    &:hover {
+      color: $accent-text;
+    }
+  }
+}
+
+.welcome-message {
+    font-size: 3em;
+    padding: 0 .5em;
+    color: $text-icons;
+    text-align: center;
+}
+
+.container { 
+  h1.section-title {
+    font-size: 4em;
+    margin: 0;
+    color: $secondary-text;
+    font-weight: 400;
+  } 
+}
+
+.recent-work a {
+  color: $text-icons;
+  text-align: center;
+  text-decoration: none;
+  figcaption {
+    font-size: 1.2em;
+    padding: 1em;
+    display: block;
+    h2 {
+      margin: 0;
+      font-weight: 400;
+    }
+  }
+}
+
+
+.contact-me li label {
+  color: $accent-text;
+  font-size: .8em;
+}
+
+footer {
+  text-align: center;
+  font-size: 1em;
+  color: $secondary-text;
+}

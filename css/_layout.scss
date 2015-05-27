@@ -1,0 +1,264 @@
+$dark-primary: #00796b;
+$primary: #009688;
+$light-primary: #b2dfdb;
+$accent: #cddc39;
+$divider-color: #b6b6b6;
+
+@mixin flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+}
+
+@mixin dropshadow {
+  box-shadow: 0 6px 3px 0 rgba(0,0,0,.5);
+}
+
+#wrap {
+  position: relative;
+  @include size(100vw 100vh);
+  overflow: auto; 
+}
+ 
+header {
+  @include flexcontainer;
+  background: $primary;
+  position: fixed;
+  top: -60px; 
+  left: 0;
+  @include size(100vw 60px);
+  z-index: 999;
+  -webkit-flex-direction: row; 
+  flex-direction: row;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  transition: 1s; 
+  .fix-header & { 
+    background: $dark-primary;
+    @include dropshadow; 
+    @include transition(all 1s $ease-out-quad); 
+    top: 0; 
+  }
+  .site-title {
+    flex: 1 50%;
+  }
+  nav {
+    flex: 1 50%;
+    ul {
+      @include flexcontainer;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      flex-flow: row wrap;
+      -webkit-flex-flow: row wrap;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
+      list-style: none;
+    }
+  }
+}
+
+.welcome-message {
+  position: relative;
+  margin-bottom: 2em;
+  @include flexcontainer;
+  @include dropshadow;
+  background: $primary;
+  @include size(100vw 90vh);
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  @include flexcontainer;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  padding: 1em;
+  .section-title {
+    flex: 1 100%;
+  }
+}
+
+section {
+  &.about {
+    background: $light-primary;
+    @include dropshadow;
+  }
+}
+
+.recent-work {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include flexcontainer;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  li a {
+    display: block;
+    margin: 1em;
+    width: 20vw;
+      img {
+        @include size(20vw);
+        display: block;
+      }
+      figure {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 5;
+        &::before {
+          position: absolute;
+          content: "";
+          background-position: 0 0;
+          top: .5em;
+          right: .5em;
+          width: 1.5em;
+          height: 1.5em;
+        } 
+        figcaption {
+          background: $dark-primary;
+        }
+      }
+    }
+  }
+
+
+//When adding the actual icons, move background color accent to above and then just place the svg image in background image below
+li.web figure::before {
+  background-color: $accent;
+}
+
+li.infographic figure::before {
+  background-color: $primary;
+}
+
+li.design figure::before {
+  background-color: $divider-color;
+}
+
+
+.about {
+  p {
+    flex: 2 60%;
+  }
+  img {
+    flex: 1 40%; 
+  }
+
+}
+
+.contact {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+  }
+}
+
+
+.contact-me {
+  margin: 0 1em;
+  flex: 1 30%;
+  li {
+    position: relative;
+    padding: 1.5em 0 0;
+    margin: 0 1em; 
+    input, textarea {
+      background: #fff;
+      z-index: 2;
+      position: relative;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid $accent;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+    textarea {
+      height: 6em;
+    }
+    label {
+      z-index: 1;
+      transition: // not padding
+      background 0.2s,
+      color 0.2s,
+      top 0.2s,
+      bottom 0.2s,
+      right 0.2s,
+      left 0.2s;
+      position: absolute; 
+      top: 2em;
+      left: 0;
+    }
+    input:focus + label, textarea:focus + label {
+      top: 5px; 
+    }
+    &:nth-child(4) {
+      text-align: center;
+    }
+    #submit { 
+      text-align: center;
+      width: auto;
+      background-color: $accent;
+//      box-shadow: 1px 3px 5px 0 rgba(0,0,0,.3);
+      border: none;
+      padding: .5em 3em; 
+      box-shadow: 0 2px 5px 1px rgba(#000, 0.2);
+      transition: all 0.25s cubic-bezier(.20,.70,.40,1);
+      &.clicked {
+        box-shadow: 0 5px 10px 2px rgba(#000, 0.3);
+      }
+    }
+    
+  }
+}
+
+.social {
+  flex: 2 50%;
+  h2 {
+   text-align: center;
+  }
+  ul {
+    @include flexcontainer;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    li a {
+      @include hide-text;
+      display: block;
+      height: 4em;
+      width: 4em; 
+      margin: 0 .5em;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: contain;
+      &#github { background-image: url(../img/github.svg);}
+      &#linkedin { background-image: url(../img/linkedin.svg);}
+      &#wordpress { background-image: url(../img/wordpress.svg);}
+    }
+  }
+}
+
+footer {
+  padding: 1em 0;
+}
