@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Daniel Gading</title>
+        <title>Daniel Gading, Front End Guy</title>
         <meta name="description" content="">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -13,131 +14,144 @@
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body id="lightbox">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
       
-      <div id="wrap">
+    <div id="wrap">
       
       <header class="flexcontainer">
-        <h1 class="site-title">Daniel Gading</h1>
+        <h1 class="site-title">Daniel, Front End Guy</h1>
         <nav class="horiz-nav">
-          <ul>
-            <li><a href="#test">My Work</a></li>
-            <li><a href="#bob">About Me</a></li>
-            <li><a href="#frank">Contact</a></li>
+          <a id="nav-toggle" href="javascript:;"><span></span></a>
+          <ul id="site_nav">
+            <li><a href="#mywork">My Work</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#contactme">Contact</a></li>
           </ul>
         </nav>
       </header>
       <aside class="welcome-message">
-        Hi, I'm Daniel!<br>
-        Welcome to my little corner of the web.
+        <span>
+          Hi, I'm Daniel!<br>
+          Welcome to my little corner of the web.
+        </span>
       </aside>
-      <section class="container work" id="test">
+      <section class="container work lightbox" id="mywork">
         <h1 class="section-title">Some of My Work</h1>
         <ul class="recent-work">
 					<li class="web">
-            <a href="#">
+            <a href="img/edlio-corp.jpg" data-large="img/edlio-corp.jpg" data-title="Click here to visit <a href='http://edlio.com' target='_blank'>edlio.com</a>" class="lightbox-trigger">
 					    <figure>
-					    	<img src="http://fillmurray.com/230/300" alt="">
+					    	<img src="img/edlio-corp.jpg" alt="Edlio Corporate Site Updates">
 					    	<figcaption>
-					    		 <h2>Example Work 1</h2>
+					    		 <h2>Edlio.com</h2>
 					    	</figcaption>
 					    </figure>
             </a>
 					</li>
           <li class="web">
-              <a href="#">
+              <a href="img/edlio-help.jpg" data-large="img/edlio-help.jpg" data-title="Click here to visit <a href='http://help.edlio.com' target='_blank'>help.edlio.com</a>" class="lightbox-trigger">
 						    <figure>
-						    	<img src="http://fillmurray.com/230/300" alt="">
+						    	<img src="img/edlio-help.jpg" alt="Edlio Help Site">
 						    	<figcaption>
-						    		 <h2>Example Work 2</h2>
-						    	</figcaption>
-						    </figure>
-              </a>
-						</li>
-          <li class="infographic">
-              <a href="#">
-						    <figure>
-						    	<img src="http://fillmurray.com/230/300" alt="">
-						    	<figcaption>
-						    		 <h2>Example Work 3</h2>
+						    		 <h2>Edlio Help Site</h2>
 						    	</figcaption>
 						    </figure>
               </a>
 						</li>
           <li class="design">
-              <a href="#">
+              <a href="img/misfortune_book_cover.png" data-large="img/misfortune_book_cover.png" data-title="Thesis Cover" class="lightbox-trigger">
 						    <figure>
-						    	<img src="http://fillmurray.com/230/300" alt="">
+						    	<img src="img/misfortune_book_cover.png" alt="Misfortune and Family Book Cover">
 						    	<figcaption>
-						    		 <h2>Example Work 4</h2>
-						    	</figcaption>
-						    </figure>
-              </a>
-						</li>
-          <li class="infographic">
-              <a href="#">
-						    <figure>
-						    	<img src="http://fillmurray.com/230/300" alt="">
-						    	<figcaption>
-						    		 <h2>Example Work 5</h2>
+						    		 <h2>Thesis Cover</h2>
 						    	</figcaption>
 						    </figure>
               </a>
 						</li>
           <li class="design">
-              <a href="#">
+              <a href="img/business_cards.png" data-large="img/business_cards.png" data-title="Business Cards" class="lightbox-trigger">
 						    <figure>
-						    	<img src="http://fillmurray.com/230/300" alt="">
+						    	<img src="img/business_cards.png" alt="Business Card Designed">
 						    	<figcaption>
-						    		 <h2>Example Work 6</h2>
+						    		 <h2>Business Cards</h2>
 						    	</figcaption>
 						    </figure>
               </a>
 						</li>
 					</ul>
       </section>
-      <section class="container about" id="bob">
+      <section class="container about" id="aboutme">
         <h1 class="section-title">About Me</h1>
+        <div class="bio">
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas felis est, ultricies vel molestie vel, molestie at elit. Sed nisi urna, mattis vel ante non, scelerisque mollis dui. Sed id ligula quis neque varius vulputate nec quis turpis. Duis dictum, risus eu cursus lobortis, elit tortor faucibus nulla, eget dignissim lorem augue vitae sem. Fusce nunc dolor, suscipit eget suscipit non, luctus eu leo. Sed scelerisque feugiat massa, ut efficitur orci tincidunt vitae. Phasellus a odio sollicitudin, dignissim justo vel, venenatis quam. Nullam posuere aliquam enim nec sollicitudin. Vivamus consectetur erat eget orci tempus faucibus. Etiam suscipit tincidunt eros. Aliquam auctor, lectus nec suscipit facilisis, magna felis accumsan elit, et iaculis dui enim vestibulum lorem. Nulla mollis sollicitudin euismod. Morbi risus mauris, imperdiet sed libero ornare, rutrum pellentesque est.
-
-Mauris eu neque at velit pellentesque cursus non sit amet urna. Ut sollicitudin vel metus ac porttitor. Phasellus sit amet euismod magna, ut luctus mi. Donec aliquet tristique eros ullamcorper lacinia. Fusce et purus sed enim venenatis vestibulum eu sit amet lorem. Mauris interdum elementum risus porta varius. Vivamus efficitur augue eros, eget aliquam ante vestibulum at. Donec finibus neque sed ex maximus, a semper ex consequat. Donec et commodo odio. Phasellus mollis in metus et euismod. Nulla sit amet est sagittis, tincidunt turpis id, rhoncus neque. Sed orci leo, bibendum at suscipit quis, interdum at neque. Suspendisse tristique libero sit amet dui pharetra scelerisque. Sed tempus dapibus nunc eget luctus. Donec ut facilisis neque, a consequat erat. Fusce eu arcu sed arcu congue ultricies id eu lorem.
-
-Suspendisse maximus cursus lorem, et molestie lacus hendrerit sed. Sed mattis eros at magna convallis, euismod facilisis metus posuere. Nam feugiat consectetur risus, in malesuada lectus imperdiet non. Duis posuere leo id sem suscipit tincidunt. Donec tincidunt sagittis turpis. Mauris lacus est, posuere quis scelerisque ut, sagittis quis nibh. Nulla ut neque non dolor consectetur lacinia eu in erat. Integer commodo interdum odio. Etiam et malesuada felis, id posuere diam. Sed vel scelerisque dui, auctor dictum metus. Cras cursus, est non volutpat ultricies, orci diam laoreet dolor, eget fringilla sem magna non risus. Suspendisse potenti. Sed eu nulla nunc. Nullam eget arcu nunc. Etiam dapibus ex eu lobortis blandit.
-        </p>
-        <img src="http://fillmurray.com/400/400" alt="">
+          If you've scrolled down this far, you've already seen what I can do, but you might still want to know a little about me. My background was originally in philosophy and illustration. Over time I've found myself being pulled towards the interactivity of the web. I look at every project as a puzzle just waiting to be solved. My first sites were completely sliced from PSDs, so the puzzle consisted of how do I make this site look good in a table. It's a lot more fun now with all the cool things CSS and Javascript can do on the web. Besides just my coding abilities, I've also gotten to lead an HTML support team, which focused on building all the things our proprietary CMS couldn't accomplish. I was able to help teach entry level coders new tools like Javascript and Sass markup, as well as educate clients on how the web works.  </p>
+         <p>All that above isn't what you really wanted to know. Here are the important facts about me:
+          <ol>
+            <li>I like cats!</li>
+            <li>I have way to many hours logged on Steam.</li>
+            <li>I really like ::before and ::after.</li>
+            <li>I'm terrible at basketball.</li>
+            <li>I once ate an entire Snickers ice cream cake.</li>
+          </ol>
+          
+          </p> 
+        </div>
       </section>
-      <section class="container contact" id="frank">
+      <section class="container contact" id="contactme">
         <h1 class="section-title">Get in Touch</h1>
-        <form class="contact-me">
+        <?php
+			    $name = $_POST['contact_name'];
+			    $email = $_POST['contact_email'];
+			    $message = $_POST['contact_message'];
+	
+	
+				$from = 'From: DanielGading.com';
+				$to = 'contact@danielgading.com';
+				$subject = 'Contact Form Message';
+	
+			    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+	
+			?>
+
+        <?php
+			if ($_POST) {
+			    if (mail ($to, $subject, $body, $from)) { 
+			        echo 'Thanks! I\'ll get back to you as soon as possible.';
+			    } else { 
+			        echo 'Something went wrong, please try again!'; 
+			    }
+			}
+			?>
+        
+        <form class="contact-me" id="contact_me" method="post" action="index.php">
           <h2>Contact me directly</h2>
           <ul>
             <li>
-              <input id="contact_name" type="text" placeholder="Spiderman" />
+              <input id="contact_name" name="contact_name" type="text" placeholder="Spiderman" />
               <label for="contact_name">Your Name</label>
             </li>
             <li>
-              <input id="contact_phone" type="email" placeholder="peter@dailybugle.com"/>
-              <label for="contact_phone">Your Email</label>
+              <input id="contact_email" name="contact_email" type="email" placeholder="peter@dailybugle.com"/>
+              <label for="contact_email">Your Email</label>
             </li>
             <li>
-              <textarea id="contact_message" placeholder="Can I be an avenger?"></textarea>
+              <textarea id="contact_message" name="contact_message" placeholder="Can I be an avenger?"></textarea>
               <label for="contact_message">Your Message</label>
             </li>
             <li>
-              <input id="submit" type="submit" value="Submit" />
+              <input id="submit" name="submit" type="submit" value="Submit" />
             </li>
           </ul>
         </form>
         <nav class="social">
           <h2>Alternatively you can stalk me on these sites</h2>
           <ul>
-            <li><a id="linkedin" href="http://www.linkedin.com">LinkedIn</a></li>
+            <li><a id="linkedin" href="https://www.linkedin.com/pub/daniel-gading/2a/2b1/209">LinkedIn</a></li>
             <li><a id="wordpress" href="http://www.illustratingtheweb.com">My Blog</a></li>
-            <li><a id="github" href="http://www.github.com">Github</a></li>
+            <li><a id="github" href="https://github.com/dgading">Github</a></li>
           </ul>
         </nav>
         
@@ -146,8 +160,16 @@ Suspendisse maximus cursus lorem, et molestie lacus hendrerit sed. Sed mattis er
         &copy; 2015 Daniel Gading
       </footer>
       
-      </div>
+      
+<!-- 
+Credits
+infographic by Hayley Warren from the Noun Project
+Landing Page by Azis from the Noun Project
+design by Mateo Zlatar from the Noun Project
 
+-->
+      
+    </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
@@ -161,7 +183,7 @@ Suspendisse maximus cursus lorem, et molestie lacus hendrerit sed. Sed mattis er
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            ga('create','UA-18049112-1','auto');ga('send','pageview');
         </script>
     </body>
 </html>

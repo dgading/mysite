@@ -1,0 +1,25 @@
+//Colors
+$text-icons: #fff;
+$primary-text: #212121;
+$secondary-text: #727272;
+$dark-primary: #00796b;
+$primary: #009688;
+$light-primary: #b2dfdb;
+$accent: #cddc39;
+$divider-color: #b6b6b6; 
+
+//Media Queries
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }  
+}

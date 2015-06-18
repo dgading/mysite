@@ -1,43 +1,97 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 
-$text-icons: #fff;
-$primary-text: #212121;
-$secondary-text: #727272;
-$accent-text: #cddc39;
-
 * {
   font-family: 'PT Sans', sans-serif; 
 }
 
+ul { 
+  margin: 0;
+}
 
 header {
   .site-title {
+    top: 0;
+    left: -10em;
     margin: 0;
-  }  
+    padding: 1em 0 0;
+    width: 100%;
+    position: absolute;
+    color: $text-icons;
+    @include transition(all 2s $ease-out-quad);
+    font-size: 1em;
+    @include tablet {
+      font-size: 2em;
+      margin: 0;
+    }
+    @include desktop {
+      font-size: 2em;
+      margin: 0;
+      padding: .25em 0 0 .5em;
+    }
+  }
+  .show { 
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    @include transition(all 2s $ease-out-quad);
+    @include tablet {
+      font-size: 2em;
+      padding: .25em 0 0 .5em;
+    }
+    @include desktop {
+      font-size: 2em;
+      padding: .25em 0 0 .5em;
+    
+  }
+}
   nav li a {
     text-decoration: none;
     padding: 1em;
-    font-size: 1.2em;
+    font-size: 1em;
     color: $text-icons;
     &:hover {
-      color: $accent-text;
+      color: $accent;
     }
-  }
+  } 
 }
 
 .welcome-message {
+  font-size: 2em;
+  padding: 0 .5em; 
+  color: $text-icons;
+  text-align: center;
+  
+  @include tablet {
+    font-size: 2em;
+  }
+  @include desktop {
     font-size: 3em;
-    padding: 0 .5em;
-    color: $text-icons;
-    text-align: center;
+  }
+  span {
+    @include transition(all 1s $ease-out-quad);  
+  }
+}
+
+.remove-text {
+  @include transition(all 2s $ease-out-quad);
+  color: transparent;
+  font-size: .1em;
+  margin-top: -40em;
 }
 
 .container { 
   h1.section-title {
-    font-size: 4em;
+    font-size: 2.5em; 
     margin: 0;
     color: $secondary-text;
     font-weight: 400;
+    @include tablet {
+      font-size: 3em;
+    }
+    @include desktop {
+      font-size: 4em;
+    }
   } 
 }
 
@@ -56,9 +110,16 @@ header {
   }
 }
 
+.bio {
+  padding: 0 10px 0 0;
+  p {
+  font-size: 1.2em;
+  }
+}
+
 
 .contact-me li label {
-  color: $accent-text;
+  color: $accent;
   font-size: .8em;
 }
 
