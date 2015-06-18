@@ -52,7 +52,7 @@ header {
 		  position: absolute;
 		  padding: 20px 0;
 		  background: $primary;
-      right: -10em;
+      right: -20em;
 		  top: 59px;
       height: 100vh;
       box-shadow: 0 6px 3px 0 rgba(0,0,0,.5);
@@ -60,7 +60,7 @@ header {
       list-style: none;
       @include transition(all 2s $ease-out-quad);
       li a {
-        padding: 1em;
+        padding: 1em; 
         display: block;
       }
       @include desktop {
