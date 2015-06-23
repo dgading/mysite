@@ -38,9 +38,11 @@ header {
   }
   .site-title {
     flex: 1 60%;
+    -webkit-flex: 1 60%;
   }
   nav {
     flex: 1 40%;
+    -webkit-flex: 1 40%;
     ul {
       @include flexcontainer;
       -webkit-flex-direction: column;
@@ -94,11 +96,18 @@ header {
 
 #nav-toggle { 
   cursor: pointer; 
-  padding: 1.5em 1.5em 0 0;
+  padding: 1.5em 1.5em 0 0; 
   float: right;
-  align-self: flex-end;
+  align-content: flex-end;
+  -webkit-align-content: flex-end;
   @include desktop {
     display: none; 
+  }
+  span:before {
+    top: -10px; 
+  }
+  span:after {
+    bottom: -10px;
   }
 }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
@@ -111,15 +120,9 @@ header {
   display: block;
   content: '';
 }
-#nav-toggle span:before {
-  top: -10px; 
-}
-#nav-toggle span:after {
-  bottom: -10px;
-}
 
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-  transition: all 500ms ease-in-out;
+  @include transition(all 500ms $ease-in-out-quad);
 }
 #nav-toggle.active span {
   background-color: transparent;
@@ -128,10 +131,10 @@ header {
   top: 0;
 }
 #nav-toggle.active span:before {
-  transform: rotate(45deg);
+  @include transform(rotate(45deg));
 }
 #nav-toggle.active span:after {
-  transform: rotate(-45deg);
+  @include transform(rotate(-45deg));
 } 
   }
 }
@@ -149,6 +152,7 @@ header {
   -webkit-justify-content: center;
   justify-content: center;
   align-items: center;
+  -webkit-align-items: center;
   @include tablet {
     margin-bottom: 2em;
   }
