@@ -277,11 +277,20 @@ section {
       border-top: none;
       border-left: none;
       border-right: none;
-      border-bottom: 1px solid $accent;
+      
       width: 100%;
       &:focus {
         outline: none;
       }
+    }
+    input.ng-pristine, textarea.ng-pristine {
+      border-bottom: 1px solid $dark-primary;
+    }
+    input.ng-touched.ng-valid, textarea.ng-touched.ng-valid {
+      border-bottom: 1px solid $accent;
+    }
+    input.ng-dirty.ng-invalid, textarea.ng-dirty.ng-invalid {
+      border-bottom: 1px solid $divider-color;
     }
     textarea {
       height: 6em;

@@ -255,17 +255,17 @@ $('#submit').on('mousedown', function(e){
 
 
 
-	//CONTACT CODE
-	
-	$('#contact_me').on('submit', function(e) {
-	        e.preventDefault();
-			$.ajax({
-			    url: $("#contact_me").attr("action"),
-			    type: $("#contact_me").attr("method"),
-			    data: $("#contact_me").serialize(),
-			    success: function(data) {
-			        //do something with the data returned from the PHP page.
-			        alert("Thanks! I\'ll get back to you as soon as possible.");
-			    }
-			});
-	    });
+//	//CONTACT CODE
+//	
+//	$('#contact_me').on('submit', function(e) {
+//	        e.preventDefault();
+//			$.ajax({
+//			    url: $("#contact_me").attr("action"),
+//			    type: $("#contact_me").attr("method"),
+//			    data: $("#contact_me").serialize(),
+//			    success: function(data) {
+//			        //do something with the data returned from the PHP page.
+//			        alert("Thanks! I\'ll get back to you as soon as possible.");
+//			    }
+//			});
+//	    });

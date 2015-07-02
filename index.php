@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="myApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body id="lightbox">
@@ -26,9 +26,9 @@
         <nav class="horiz-nav">
           <a id="nav-toggle" href="javascript:;"><span></span></a>
           <ul id="site_nav">
-            <li><a href="#mywork">My Work</a></li>
-            <li><a href="#aboutme">About Me</a></li>
-            <li><a href="#contactme">Contact</a></li>
+            <li><a href="#my_work">My Work</a></li>
+            <li><a href="#about_me">About Me</a></li>
+            <li><a href="#contact_form">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -38,7 +38,7 @@
           Welcome to my little corner of the web.
         </span>
       </aside>
-      <section class="container work lightbox" id="mywork">
+      <section class="container work lightbox" id="my_work">
         <h1 class="section-title">Some of My Work</h1>
         <ul class="recent-work">
 					<li class="web">
@@ -83,7 +83,7 @@
 						</li>
 					</ul>
       </section>
-      <section class="container about" id="aboutme">
+      <section class="container about" id="about_me">
         <h1 class="section-title">About Me</h1>
         <div class="bio">
         <p>
@@ -100,52 +100,40 @@
           </p> 
         </div>
       </section>
-      <section class="container contact" id="contactme">
+      <section class="container contact" id="contact_form">
         <h1 class="section-title">Get in Touch</h1>
-        <?php
-			    $name = $_POST['contact_name'];
-			    $email = $_POST['contact_email'];
-			    $message = $_POST['contact_message'];
-	
-	
-				$from = 'From: DanielGading.com';
-				$to = 'contact@danielgading.com';
-				$subject = 'Contact Form Message';
-	
-			    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-	
-			?>
 
-        <?php
-			if ($_POST) {
-			    if (mail ($to, $subject, $body, $from)) { 
-			        echo 'Thanks! I\'ll get back to you as soon as possible.';
-			    } else { 
-			        echo 'Something went wrong, please try again!'; 
-			    }
-			}
-			?>
+<!--        -->
         
-        <form class="contact-me" id="contact_me" method="post" action="index.php">
+        
+        
+        <form id="contact_me" class="contact-me" name="contactMe" ng-controller="ReviewController as reviewCtrl" ng-submit="submitForm()" novalidate >
           <h2>Contact me directly</h2>
+          <div class="success" ng-show="success && contactMe.name.$pristine && contactMe.email.$pristine">Thanks! I'll try to get back to you as soon as possible.</div>
           <ul>
             <li>
-              <input id="contact_name" name="contact_name" type="text" placeholder="Spiderman" />
-              <label for="contact_name">Your Name</label>
+              <input id="name" name="name" type="text" placeholder="Spiderman" ng-model="formData.name" required />
+              <label for="name">Your Name</label>
+              <span class="help-block" ng-show="errorName">{{ errorName }}</span> 
             </li>
             <li>
-              <input id="contact_email" name="contact_email" type="email" placeholder="peter@dailybugle.com"/>
-              <label for="contact_email">Your Email</label>
+              <input id="email" name="email" type="email" placeholder="peter@dailybugle.com" ng-model="formData.email" required />
+              <label for="email">Your Email</label>
+              <span class="help-block" ng-show="errorName">{{ errorEmail }}</span>
+              <span ng-show="contactMe.email.$invalid && !contactMe.email.$pristine" class="help-block">A valid email is required.</span>
             </li>
             <li>
-              <textarea id="contact_message" name="contact_message" placeholder="Can I be an avenger?"></textarea>
-              <label for="contact_message">Your Message</label>
+              <textarea id="body" name="body" placeholder="Can I be an avenger?" ng-model="formData.body" required ></textarea>
+              <label for="body">Your Message</label>
+              <span class="help-block" ng-show="errorName">{{ errorBody }}</span> 
             </li>
             <li>
-              <input id="submit" name="submit" type="submit" value="Submit" />
+              <input id="submit" name="submit" type="submit" value="Submit"  />
             </li>
           </ul>
         </form>
+       
+        
         <nav class="social">
           <h2>Alternatively you can stalk me on these sites</h2>
           <ul>
@@ -159,16 +147,7 @@
       <footer>
         &copy; 2015 Daniel Gading
       </footer>
-      
-      
-<!-- 
-Credits
-infographic by Hayley Warren from the Noun Project
-Landing Page by Azis from the Noun Project
-design by Mateo Zlatar from the Noun Project
-
--->
-      
+    
     </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

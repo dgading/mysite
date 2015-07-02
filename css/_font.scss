@@ -117,11 +117,22 @@ header {
   }
 }
 
-
-.contact-me li label {
-  color: $accent;
-  font-size: .8em;
+.contact-me {
+  .success {
+    font-size: 1.2em;
+    color: $accent;
+  }
+  li label {
+    color: $accent;
+    font-size: .8em;
+  }
+  .help-block {
+    color: $secondary-text;
+    font-size: .8em;
+  }
 }
+
+ 
 
 footer {
   text-align: center;
