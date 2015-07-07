@@ -41,46 +41,50 @@
       <section class="container work lightbox" id="my_work">
         <h1 class="section-title">Some of My Work</h1>
         <ul class="recent-work">
-					<li class="web">
-            <a href="img/edlio-corp.jpg" data-large="img/edlio-corp.jpg" data-title="Click here to visit <a href='http://edlio.com' target='_blank'>edlio.com</a>" class="lightbox-trigger">
-					    <figure>
-					    	<img src="img/edlio-corp.jpg" alt="Edlio Corporate Site Updates">
-					    	<figcaption>
-					    		 <h2>Edlio.com</h2>
-					    	</figcaption>
-					    </figure>
-            </a>
+          <li>
+					 <figure>
+					 	<img src="img/phoenixclc.jpg" alt="Phoenix Community Learning Center">
+					 	<figcaption>
+					 		<h2>Phoenix Community Learning Center</h2>
+              <span class="tech">HTML, Scss, Java</span>
+              Recent PSD to HTML slice on Edlio's CMS. Using a mix of flexbox and custom mixins, the site is built to meet accesibility standards and play well with as many browsers as possible, including IE9. 
+              <span class="site-link"><a href="http://www.phoenixclc.org">Visit the Site</a></span>
+					 	</figcaption>
+					 </figure>
 					</li>
-          <li class="web">
-              <a href="img/edlio-help.jpg" data-large="img/edlio-help.jpg" data-title="Click here to visit <a href='http://help.edlio.com' target='_blank'>help.edlio.com</a>" class="lightbox-trigger">
-						    <figure>
-						    	<img src="img/edlio-help.jpg" alt="Edlio Help Site">
-						    	<figcaption>
-						    		 <h2>Edlio Help Site</h2>
-						    	</figcaption>
-						    </figure>
-              </a>
-						</li>
-          <li class="design">
-              <a href="img/misfortune_book_cover.png" data-large="img/misfortune_book_cover.png" data-title="Thesis Cover" class="lightbox-trigger">
-						    <figure>
-						    	<img src="img/misfortune_book_cover.png" alt="Misfortune and Family Book Cover">
-						    	<figcaption>
-						    		 <h2>Thesis Cover</h2>
-						    	</figcaption>
-						    </figure>
-              </a>
-						</li>
-          <li class="design">
-              <a href="img/business_cards.png" data-large="img/business_cards.png" data-title="Business Cards" class="lightbox-trigger">
-						    <figure>
-						    	<img src="img/business_cards.png" alt="Business Card Designed">
-						    	<figcaption>
-						    		 <h2>Business Cards</h2>
-						    	</figcaption>
-						    </figure>
-              </a>
-						</li>
+          <li>
+					 <figure>
+					 	<img src="img/fabensisd.jpg" alt="Fabens Independent School District">
+					 	<figcaption>
+					 		<h2>Fabens Independent School District</h2>
+              <span class="tech">HTML, Scss, Java</span>
+              PSD to HTML slice using Edlio's CMS. The trickest part was the infitely stretching blue and grey homepage decoration. 
+              <span class="site-link"><a href="http://www.fabensisd.net">Visit the Site</a></span>
+					 	</figcaption>
+					 </figure>
+					</li>
+					<li>
+					 <figure>
+					 	<img src="img/edlio-corp.jpg" alt="Edlio Corporate Site Updates">
+					 	<figcaption>
+					 		<h2>Edlio</h2>
+              <span class="tech">HTML, PHP, CSS</span>
+              I didn't code the initial website, but maintained it for 2 years. Some of the tasks included addding new portfolio items, building custom contact pages, responsive landing pages for HTML email campaigns.
+              <span class="site-link"><a href="http://www.edlio.com">Visit the Site</a></span>
+					 	</figcaption>
+					 </figure>
+					</li>
+          <li>
+					 <figure>
+					 	<img src="img/edlio-help.jpg" alt="Edlio Help Site">
+					 	<figcaption>
+					 		<h2>Edlio Help Site</h2>
+              <span class="tech">HTML, PHP, CSS, JQuery</span>
+              Gave the site a face lift adding new articles and some JQuery UI elements. 
+              <span class="site-link"><a href="http://help.edlio.com">Visit the Site</a></span>
+					 	</figcaption>
+					 </figure>
+					</li>
 					</ul>
       </section>
       <section class="container about" id="about_me">
@@ -102,11 +106,6 @@
       </section>
       <section class="container contact" id="contact_form">
         <h1 class="section-title">Get in Touch</h1>
-
-<!--        -->
-        
-        
-        
         <form id="contact_me" class="contact-me" name="contactMe" ng-controller="ReviewController as reviewCtrl" ng-submit="submitForm()" novalidate >
           <h2>Contact me directly</h2>
           <div class="success" ng-show="success && contactMe.name.$pristine && contactMe.email.$pristine">Thanks! I'll try to get back to you as soon as possible.</div>

@@ -82,7 +82,7 @@ header {
 
 .container { 
   h1.section-title {
-    font-size: 2.5em; 
+    font-size: 2em; 
     margin: 0;
     color: $secondary-text;
     font-weight: 400;
@@ -95,17 +95,29 @@ header {
   } 
 }
 
-.recent-work a {
-  color: $text-icons;
-  text-align: center;
-  text-decoration: none;
+.recent-work {
   figcaption {
-    font-size: 1.2em;
-    padding: 1em;
-    display: block;
+    color: $primary-text;
+    font-size: 1em;
+    @include desktop {
+        font-size: 1.2em;
+      }
     h2 {
       margin: 0;
+      font-size: 1.5em;
       font-weight: 400;
+      color: $dark-primary;
+      @include desktop {
+        font-size: 2em;
+      }
+    }
+    .tech {
+      color: $secondary-text;
+    }
+    .site-link a {
+      color: $primary;
+      text-decoration: none;
+      
     }
   }
 }

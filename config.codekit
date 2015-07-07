@@ -1565,6 +1565,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/fabensisd.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 163613,
+		"inputAbbreviatedPath": "\/img\/fabensisd.jpg",
+		"outputAbbreviatedPath": "\/img\/fabensisd.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/help_edlio.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1583,6 +1594,17 @@
 		"initialSize": 63269,
 		"inputAbbreviatedPath": "\/img\/misfortune_book_cover.png",
 		"outputAbbreviatedPath": "\/img\/misfortune_book_cover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/phoenixclc.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 169233,
+		"inputAbbreviatedPath": "\/img\/phoenixclc.jpg",
+		"outputAbbreviatedPath": "\/img\/phoenixclc.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1639,6 +1661,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/js\/templates\/overlay.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/templates\/overlay.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/js\/templates\/recentWork.html": {
 		"fileType": 8192,
