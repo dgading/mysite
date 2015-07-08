@@ -69,7 +69,7 @@
 					 	<figcaption>
 					 		<h2>Edlio</h2>
               <span class="tech">HTML, PHP, CSS</span>
-              I didn't code the initial website, but maintained it for 2 years. Some of the tasks included addding new portfolio items, building custom contact pages, responsive landing pages for HTML email campaigns.
+              I didn't code the initial website, but maintained it for 2 years. Some of the tasks included adding new portfolio items, building custom contact pages, responsive landing pages for HTML email campaigns.
               <span class="site-link"><a href="http://www.edlio.com">Visit the Site</a></span>
 					 	</figcaption>
 					 </figure>
